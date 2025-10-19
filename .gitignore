@@ -5,7 +5,8 @@ __pycache__/
 
 # C extensions
 *.so
-
+api-test
+*.md
 # Distribution / packaging
 .Python
 build/

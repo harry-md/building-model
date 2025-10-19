@@ -1,0 +1,19 @@
+[tool.pyright]
+typeCheckingMode = "off"
+reportMissingTypeStubs = false
+pythonVersion = "3.13"
+venvPath = "."
+venv = ".venv"
+
+[tool.ruff]
+target-version = "py313"
+line-length = 88
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B", "ANN", "T20"]
+ignore = [
+  "ANN101",
+  "B008",
+]
+fixable = ["ALL"]
+unfixable = []
