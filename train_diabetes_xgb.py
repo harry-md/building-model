@@ -32,8 +32,8 @@ df = pd.read_csv("./data/diabetes.csv")
 
 # --- 2. Define target ---
 target_col = "Outcome"
-X = df.drop(columns=[target_col])
-y = df[target_col].astype(int)
+X = df.drop(columns="Outcome", axis=1)
+y = df["Outcome"]
 
 # --- 3. Handle invalid 0-values ---
 zero_cols = ["Glucose", "BloodPressure", "SkinThickness", "Insulin", "BMI"]
@@ -41,10 +41,10 @@ X[zero_cols] = X[zero_cols].replace(0, np.nan)
 
 # --- 4. Split dataset ---
 X_train, X_temp, y_train, y_temp = train_test_split(
-    X, y, test_size=0.3, random_state=42, stratify=y
+    X, y, test_size=0.3, random_state=42, stratify=y, shuffle=True
 )
 X_valid, X_test, y_valid, y_test = train_test_split(
-    X_temp, y_temp, test_size=0.5, random_state=42, stratify=y_temp
+    X_temp, y_temp, test_size=0.5, random_state=42, stratify=y_temp, shuffle=True
 )
 
 # --- 5. Preprocessing ---

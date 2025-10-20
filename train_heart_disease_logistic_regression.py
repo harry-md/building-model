@@ -1,21 +1,25 @@
-import json, joblib, numpy as np, pandas as pd
+import json
 from pathlib import Path
-from sklearn.model_selection import train_test_split
-from sklearn.metrics import (
-    accuracy_score,
-    recall_score,
-    precision_score,
-    f1_score,
-    roc_auc_score,
-    average_precision_score,
-    precision_recall_curve,
-    confusion_matrix,
-)
-from sklearn.pipeline import Pipeline
+
+import joblib
+import numpy as np
+import pandas as pd
 from sklearn.compose import ColumnTransformer
-from sklearn.preprocessing import StandardScaler
 from sklearn.impute import SimpleImputer
 from sklearn.linear_model import LogisticRegression
+from sklearn.metrics import (
+    accuracy_score,
+    average_precision_score,
+    confusion_matrix,
+    f1_score,
+    precision_recall_curve,
+    precision_score,
+    recall_score,
+    roc_auc_score,
+)
+from sklearn.model_selection import train_test_split
+from sklearn.pipeline import Pipeline
+from sklearn.preprocessing import StandardScaler
 
 ART_DIR = Path("artifacts")
 ART_DIR.mkdir(exist_ok=True, parents=True)
@@ -108,4 +112,3 @@ json.dump(
     open(ART_DIR / "heart_schema.json", "w"),
     indent=2,
 )
-
