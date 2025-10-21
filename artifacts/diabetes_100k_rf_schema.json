@@ -1,0 +1,23 @@
+{
+    "features": [
+        "gender",
+        "age",
+        "hypertension",
+        "heart_disease",
+        "smoking_history",
+        "bmi",
+        "HbA1c_level",
+        "blood_glucose_level"
+    ],
+    "dtypes": {
+        "gender": "object",
+        "age": "float64",
+        "hypertension": "int64",
+        "heart_disease": "int64",
+        "smoking_history": "object",
+        "bmi": "float64",
+        "HbA1c_level": "float64",
+        "blood_glucose_level": "int64"
+    },
+    "target": "diabetes"
+}
