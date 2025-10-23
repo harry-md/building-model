@@ -1,0 +1,33 @@
+{
+    "features": [
+        "age",
+        "height",
+        "weight",
+        "ap_hi",
+        "ap_lo",
+        "cholesterol_2",
+        "cholesterol_3",
+        "gluc_2",
+        "gluc_3",
+        "gender",
+        "smoke",
+        "alco",
+        "active"
+    ],
+    "dtypes": {
+        "age": "float64",
+        "height": "float64",
+        "weight": "float64",
+        "ap_hi": "float64",
+        "ap_lo": "float64",
+        "cholesterol_2": "float64",
+        "cholesterol_3": "float64",
+        "gluc_2": "float64",
+        "gluc_3": "float64",
+        "gender": "float64",
+        "smoke": "float64",
+        "alco": "float64",
+        "active": "float64"
+    },
+    "target": "cardio"
+}
